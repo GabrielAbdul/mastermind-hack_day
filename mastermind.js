@@ -16,6 +16,14 @@ class Board {
 		process.stdout.write('------------');
 
 	}
+
+	get_guess() {
+		// Requires install: prompt-sync
+		// npm install prompt-sync
+		const prompt = require('prompt-sync')();
+		console.log('Available colors: W, R, B, Y')
+		const guess = prompt('What is your Guess? ');
+
+		return guess
+	}
 }
-
-
