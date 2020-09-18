@@ -2,19 +2,21 @@
 
 // print main prompt
 // enter while loop
-var Board = require('./master.js').Board;
+var Board = require('./mastermind.js').Board;
 let board = new Board();
-let row = 1;
-while (row <= 10) {
+let row = 0;
+while (row <= 9) {
+	console.log('FIRST BOARD');
 	board.printBoard();
 	console.log(board.mastermind);
     // wait for input
     let code = board.get_guess();
 	console.log(code);
 	// update board with guess
-	board.updateRow(code, row);
+	let codeString = board.updateRow(code, row);
 	board.printBoard();
-	// check input code agains mastermind
+	// check input code against mastermind code
+//	board.checkInput(codeString);
 //    r = board.checkInput();
 
 //    if (r === 1){
@@ -22,6 +24,5 @@ while (row <= 10) {
   //      break;}
   //  board.printCheckerResults();
     row += 1;
-	console.log(row);
 }
 // printLoser();
