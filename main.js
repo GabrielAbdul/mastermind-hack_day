@@ -10,7 +10,6 @@ while (row <= 9) {
 	let count = 0;
 	console.log('FIRST BOARD');
 	board.printBoard();
-	console.log(board.mastermind);
     // wait for input
     let code = board.get_guess();
 	// update board with guess
