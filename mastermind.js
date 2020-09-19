@@ -32,7 +32,9 @@ exports.Board = class Board {
 	}
 
 	updateRow(code, input_row) {
-		let checker_list = [this.row_one, this.row_two, this.row_three, this.row_four, this.row_five, this.row_six, this.row_seven, this.row_eight, this.row_nine, this.row_ten]
+		let checker_list = [this.row_one, this.row_two, this.row_three,
+			this.row_four, this.row_five, this.row_six, this.row_seven,
+			this.row_eight, this.row_nine, this.row_ten]
 		let codeString = `|${code[0]}-${code[1]}-${code[2]}-${code[3]}|`;
 		checker_list[input_row] = codeString;
 		this.updateBoard(checker_list);

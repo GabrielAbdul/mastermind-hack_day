@@ -22,8 +22,6 @@ while (row <= 9) {
 		if (codeString[i] === board.mastermind[i]) {
 			counter++;
 		}
-	}
-	for (let i = 1; i < 8; i+=2) {
 		if (board.mastermind.includes(codeString[i]) && board.mastermind[i] != codeString[i]) {
 			count++;
 		}
@@ -32,4 +30,4 @@ while (row <= 9) {
 	console.log("Numbers in correct position:", counter);
 	console.log("Numbers not in correct position but correct:", count);
 }
-console.log("YOU LOST");
+console.log("You lost the code was", board.mastermind);
