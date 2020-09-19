@@ -8,7 +8,6 @@ let row = 0;
 while (row <= 9) {
 	let counter = 0;
 	let count = 0;
-	console.log('FIRST BOARD');
 	board.printBoard();
     // wait for input
     let code = board.get_guess();
